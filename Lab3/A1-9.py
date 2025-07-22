@@ -23,7 +23,7 @@ excel = "Titanic.xlsx"
 sheet = "Sheet1"
 
 data = get_data(excel,sheet)
-'''
+
 
 
 D1 = data_mean(data['Age'])
@@ -66,9 +66,7 @@ print(md)
 plt.scatter(range(len(md)), md, c='r', marker='o')  # red circles
 plt.show()
 
-
-'''
-
+ad
 #A4
 
 X = data[['Fare']]
