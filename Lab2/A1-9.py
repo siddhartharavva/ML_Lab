@@ -16,7 +16,7 @@ data = get_data(excel,sheet)
 A = data.iloc[:, 1:4]
 C  = data.iloc[:,4:5]
 
-print("Dimensionality of Vector Space A")
+print("Dimensionality of Vector Space A")x
 print(A.shape[1])
 
 print("Number of Vectors in Vector Space A")
