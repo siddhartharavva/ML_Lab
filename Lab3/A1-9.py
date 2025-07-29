@@ -21,7 +21,8 @@ def euclidean_d(D1,D2):
     return np.linalg.norm(D1-D2)
 
 
-csv = "fmri_gap_cnn_extracted_features.csv"
+csv = "../fmri_gap_cnn_extracted_features.csv"
+
 
 data = get_data(csv)
 
@@ -46,11 +47,11 @@ print("distance between fmri_feature_14,fmri_feature_15:",Euc2)
 
 
 d1,d2 = np.histogram(data['fmri_feature_15'],bins=[0.10,0.15,0.20,0.25,0.30,0.35,0.40,0.45,0.50,0.55])
-print(d2)
-plt.hist(data['fmri_feature_14'],bins=d2)
+
+plt.hist(data['fmri_feature_15'],bins=d2)
 plt.show()
 
-#A3
+#A3 
 
 def minkowski_d(v1,v2,r):
 
@@ -69,7 +70,7 @@ plt.scatter(range(len(md)), md, c='r', marker='o')  # red circles
 plt.show()
 
 
-#A4
+#A4,A5
 
 X = data[['fmri_feature_15']]
 y = data['label']

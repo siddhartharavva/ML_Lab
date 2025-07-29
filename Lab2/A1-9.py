@@ -16,7 +16,7 @@ data = get_data(excel,sheet)
 A = data.iloc[:, 1:4]
 C  = data.iloc[:,4:5]
 
-print("Dimensionality of Vector Space A")x
+print("Dimensionality of Vector Space A")
 print(A.shape[1])
 
 print("Number of Vectors in Vector Space A")
@@ -77,7 +77,7 @@ print("Loss probability",loss_mean(data))
 
 #A4
 
-excel = 'Lab_session_Data.xlsx'
+excel = '../Lab_session_Data.xlsx'
 sheet = 'thyroid0387_UCI'
 
 th_Data = get_data(excel,sheet)
@@ -275,3 +275,4 @@ print(th_Data_Scaled[numeric_cols].head())
 
 print("\nZ-Score Standardized Data (first 5 rows):")
 print(th_Data_standardized[numeric_cols].head())
+
