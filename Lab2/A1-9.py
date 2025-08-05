@@ -3,6 +3,10 @@ import numpy as np
 import statistics as st
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, classification_report
+
 
 #A1
 def get_data(excel,sheet):
@@ -39,7 +43,17 @@ def classify_richness(data):
             print("Is Poor")
 
 classify_richness(data)
-    
+
+X = data['Payment (Rs)']
+y = data['Rich']
+X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3)  
+
+n =KNeighborsClassifier(n_neighbors=3)
+
+n.fit(X_train,y_train)
+
+print("k = 3",n.predict(X_test))
+
 
 #A3 
 def mean(data):

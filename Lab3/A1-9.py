@@ -109,3 +109,5 @@ plt.show()
 
 
 
+
+print("Train Accuracy for k=3:", n[2].score(X_train, y_train))
