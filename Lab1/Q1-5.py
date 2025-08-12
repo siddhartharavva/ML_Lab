@@ -1,3 +1,9 @@
+
+import numpy as np
+
+#1. Write a program to count the number of vowels and consonants
+#  present in an input string. 
+
 def vowels_num(sent):
     vowels  = 0
     consonants = 0
@@ -20,7 +26,12 @@ if(result==-1):
 else:
     print(f"The vowels are: {result[0]} and consonants are: {result[1]}")
 
-import numpy as np
+
+
+#2. Write a program that accepts two matrices A and B as 
+# input and returns their product AB. Check if A & B are 
+# multipliable; if not, return error message.
+
 
 
 def matrix_mul(A1,A2):
@@ -50,28 +61,8 @@ result = matrix_mul(A1,A2)
 print(result)
 
 
-def get_matrix():
-    s = input("Enter size of the matrix:")
-    s = s.strip().split(" ")
-    s = [int(x) for x in s]
-    data = input("Enter the data")
-    data = data.strip().split(" ")
-    data =  [int(x) for x in data]
-    data  = [data[i*s[1]:(i+1)*s[1]] for i in range(s[0])]
-    return data
-
-def Transpose_Mat(A):
-    
-    T_Mat = [[0 for _ in range(len(A[0]))]for _ in range(len(A))]
-    for i in range(len(A)):
-        for j in range(len(A[0])):
-            T_Mat[j][i] = A[i][j]
-    return T_Mat
-x = get_matrix()
-
-T = Transpose_Mat(x)
-print(x,T)
-
+#3. Write a program to find the number of common elements 
+# between two lists. The lists contain integers.
 
 
 def get_List():
@@ -90,3 +81,34 @@ def common_elements(l1,l2):
 a = get_List()
 b = get_List()
 print(common_elements(a,b))
+
+
+
+# 4. Write a program that accepts a matrix as 
+# input and returns its transpose. 
+
+def get_matrix():
+    s = input("Enter size of the matrix:")
+    s = s.strip().split(" ")
+    s = [int(x) for x in s]
+    data = input("Enter the data")
+    data = data.strip().split(" ")
+    data =  [int(x) for x in data]
+    data  = [data[i*s[1]:(i+1)*s[1]] for i in range(s[0])]
+    return data
+
+
+
+
+def Transpose_Mat(A):
+    
+    T_Mat = [[0 for _ in range(len(A[0]))]for _ in range(len(A))]
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            T_Mat[j][i] = A[i][j]
+    return T_Mat
+x = get_matrix()
+
+T = Transpose_Mat(x)
+print(x,T)
+
